@@ -32,12 +32,7 @@ public class StudentController {
 
     @RequestMapping(method = RequestMethod.GET)
     public Collection<Student> getAllStudents() {
-        long start = System.nanoTime();
-
-        Collection<Student> students =  studentService.getAllStudents();
-        long end = System.nanoTime();
-        System.out.println(end-start);
-        return students;
+        return studentService.getAllStudents();
     }
 
     /**
